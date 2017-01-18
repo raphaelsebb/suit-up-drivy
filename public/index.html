@@ -1,33 +1,170 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Prototype by Pixelarity
+	pixelarity.com @pixelarity
+	License: pixelarity.com/license
+-->
 <html>
-  <head>
-    <title>CSS/HTML Workshop with Drivy</title>
-  </head>
-  <body>
-    <div id="car">
-      <input class="model" type="text" placeholder="Car model"/>
-      <input class="price-by-day" type="number" placeholder="Price by day"/>
-      <input class="price-by-km" type="number" placeholder="Price by km"/>
-    </div>
-    <div id="rental">
-      <input class="begin" type="date" placeholder="Rental begin date"/>
-      <input class="end" type="date" placeholder="Rental end date"/>
-      <input class="distance" type="number" placeholder="Distance in km"/>
-      <input class="option" type="checkbox" placeholder="Deductible option"/>
-    </div>
-    <button id="compute">Compute</button>
-    <div id="actors"></div>
-    <script id="template" type="x-tmpl-mustache">
-      {{#actors}}
-        <div class="actor">
-          <span>{{who}}</span>
-          <span>{{type}}</span>
-          <span>{{amount}}</span>
-        </div>
-      {{/actors}}
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
-    <script src="drivy.js"></script>
-    <script src="index.js"></script>
-  </body>
+	<head>
+		<title>Drivy</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+
+		<!-- Header -->
+			<header id="header" class="alt">
+				<h1><a href="index.html">Drivy</a></h1>
+				<a href="#menu">Menu</a>
+			</header>
+
+		<!-- Menu -->
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="generic.html">Generic</a></li>
+					<li><a href="elements.html">Elements</a></li>
+				</ul>
+				<ul class="actions vertical">
+					<li><a href="#" class="button special fit">Sign Up</a></li>
+					<li><a href="#" class="button fit">Log In</a></li>
+				</ul>
+			</nav>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class="inner">
+					<div class="content">
+						<h2>Sed feugiat amet adipiscing</h2>
+						<p>Amet tincidunt arcu suspendisse consequat</p>
+					</div>
+					<ul class="actions vertical">
+						<li><a href="#" class="button special major">Get Started</a></li>
+						<li><a href="#" class="button major">More Info</a></li>
+					</ul>
+				</div>
+			</section>
+
+
+		
+
+		<!-- Four -->
+			<section id="four" class="wrapper style2 special">
+				<div class="inner">
+
+					<section>
+						
+							<center>
+								<div class="8u">
+									
+										
+										<div id="car">
+											<div class="row uniform">
+												<div class="12u 12u$(xsmall)">
+													<label for="car_model">Car model</label>
+													<input type="text" name="car_model" class="model" id="car_model" value="" />
+												</div>
+												<div class="6u 12u$(xsmall)">
+													<label for="price-by-day">Price by day</label>
+													<input type="number" name="price-by-day" class="price-by-day" id="price-by-day" value="" />
+												</div>
+												<div class="6u$ 12u$(xsmall)">
+													<label for="price-by-km">Price by km</label>
+													<input type="number" name="price-by-km" class="price-by-km" id="price-by-km" value="" />
+												</div>
+											</div>
+										</div>
+										
+										<div id="rental">
+											<div class="row uniform">
+												<div class="6u 12u$(xsmall)">
+													<label for="begin">Begin date</label>
+													<input type="date" name="begin" class="begin" id="begin" value="" />
+												</div>
+												<div class="6u$ 12u$(xsmall)">
+													<label for="end">End date</label>
+													<input type="date" name="end" class="end" id="end" value="" />
+												</div>
+												<div class="12u 12u$(xsmall)">
+													<label for="distance">Distance</label>
+													<input type="number" name="distance" class="distance" id="distance" value="" />
+												</div>
+												<div class="12u$ 12u$(xsmall)">
+													<input type="radio" id="option" name="option" class="option">
+													<label for="option">Deductible option</label>
+												</div>
+											</div>
+										</div>
+										
+										<div class="row uniform">
+											<div class="12u$">
+												<ul class="actions">
+													<li><button class="special" id="compute">Compute</button></li>
+													<li><input type="reset" value="Reset" /></li>
+												</ul>
+											</div>
+										</div>
+										<hr/>
+										<div id="actors"></div>
+										<script id="template" type="x-tmpl-mustache">
+									      {{#actors}}
+									        <div class="actor">
+									          <span>{{who}}</span>
+									          <span>{{type}}</span>
+									          <span>{{amount}}</span>
+									        </div>
+									      {{/actors}}
+									    </script>
+									</div>
+								</div>
+							</center>
+						
+					</section>
+
+				</div>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+						<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="#" class="icon fa-envelope"><span class="label">Envelope</span></a></li>
+					</ul>
+					<ul class="contact">
+						<li>12345 Somewhere Road</li>
+						<li>Nashville, TN 00000</li>
+						<li>(000) 000-0000</li>
+					</ul>
+					<ul class="links">
+						<li><a href="#">FAQ</a></li>
+						<li><a href="#">Support</a></li>
+						<li><a href="#">Terms</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+					<p class="copyright">&copy; Untitled. All rights reserved. Lorem ipsum dolor.</p>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
+			<script src="drivy.js"></script>
+			<script src="index.js"></script>
+    
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+	</body>
 </html>
