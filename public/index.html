@@ -26,8 +26,6 @@
 			<nav id="menu">
 				<ul class="links">
 					<li><a href="index.html">Home</a></li>
-					<li><a href="generic.html">Generic</a></li>
-					<li><a href="elements.html">Elements</a></li>
 				</ul>
 				<ul class="actions vertical">
 					<li><a href="#" class="button special fit">Sign Up</a></li>
@@ -42,7 +40,7 @@
 						<div class="12u"><span class="image fit"><img src="images/drivy-logo.png"/></span></div>
 					</div>
 					<ul class="actions vertical">
-						<li><a href="#" class="button special major">Get Started</a></li>
+						<li><a href="#form" class="button special major">Get Started</a></li>
 						<li><a href="#" class="button major">More Info</a></li>
 					</ul>
 				</div>
@@ -52,75 +50,76 @@
 		
 
 		<!-- Four -->
-			<section id="four" class="wrapper style2 special">
+			<section id="form" class="wrapper style2 special">
 				<div class="inner">
 
 					<section>
 						
-							<center>
-								<div class="8u">
+						<center>
+							<div class="8u">
 									
-										
-										<div id="car">
-											<div class="row uniform">
-												<div class="12u 12u$(xsmall)">
-													<label for="car_model">Car model</label>
-													<input type="text" name="car_model" class="model" id="car_model" value="" />
-												</div>
-												<div class="6u 12u$(xsmall)">
-													<label for="price-by-day">Price by day</label>
-													<input type="number" name="price-by-day" class="price-by-day" id="price-by-day" value="" />
-												</div>
-												<div class="6u$ 12u$(xsmall)">
-													<label for="price-by-km">Price by km</label>
-													<input type="number" name="price-by-km" class="price-by-km" id="price-by-km" value="" />
-												</div>
-											</div>
+								<div id="car">
+									<div class="row uniform">
+										<div class="12u 12u$(xsmall)">
+											<label for="car_model"><i class="fa fa-car" aria-hidden="true"></i> Car model</label>
+											<input type="text" name="car_model" class="model" id="car_model" value="" placeholder="What do you want to drive ?" />
 										</div>
-										
-										<div id="rental">
-											<div class="row uniform">
-												<div class="6u 12u$(xsmall)">
-													<label for="begin">Begin date</label>
-													<input type="date" name="begin" class="begin" id="begin" value="" />
-												</div>
-												<div class="6u$ 12u$(xsmall)">
-													<label for="end">End date</label>
-													<input type="date" name="end" class="end" id="end" value="" />
-												</div>
-												<div class="12u 12u$(xsmall)">
-													<label for="distance">Distance</label>
-													<input type="number" name="distance" class="distance" id="distance" value="" />
-												</div>
-												<div class="12u$ 12u$(xsmall)">
-													<input type="radio" id="option" name="option" class="option">
-													<label for="option">Deductible option</label>
-												</div>
-											</div>
+										<div class="6u 12u$(xsmall)">
+											<label for="price-by-day">Price by day</label>
+											<input type="number" name="price-by-day" class="price-by-day" id="price-by-day" value="" placeholder="Price (in $)" />
 										</div>
-										
-										<div class="row uniform">
-											<div class="12u$">
-												<ul class="actions">
-													<li><button class="special" id="compute">Compute</button></li>
-													<li><input type="reset" value="Reset" /></li>
-												</ul>
-											</div>
+										<div class="6u$ 12u$(xsmall)">
+											<label for="price-by-km">Price by km</label>
+											<input type="number" name="price-by-km" class="price-by-km" id="price-by-km" value="" placeholder="Price (in $)" />
 										</div>
-										<hr/>
-										<div id="actors"></div>
-										<script id="template" type="x-tmpl-mustache">
-									      {{#actors}}
-									        <div class="actor">
-									          <span>{{who}}</span>
-									          <span>{{type}}</span>
-									          <span>{{amount}}</span>
-									        </div>
-									      {{/actors}}
-									    </script>
 									</div>
 								</div>
-							</center>
+									
+								<div id="rental">
+									<div class="row uniform">
+										<div class="6u 12u$(xsmall)">
+											<label for="begin"><i class="fa fa-calendar-check-o" aria-hidden="true"></i> Begin date</label>
+											<input type="date" name="begin" class="begin" id="begin" value="" />
+										</div>
+										<div class="6u$ 12u$(xsmall)">
+											<label for="end"><i class="fa fa-calendar-minus-o" aria-hidden="true"></i> End date</label>
+											<input type="date" name="end" class="end" id="end" value="" />
+										</div>
+										<div class="12u 12u$(xsmall)">
+											<label for="distance">Distance</label>
+											<input type="number" name="distance" class="distance" id="distance" value="" placeholder="distance (in km)"/>
+										</div>
+										<div class="12u$ 12u$(xsmall)">
+											<input type="radio" id="option" name="option" class="option">
+											<label for="option">Deductible option</label>
+										</div>
+									</div>
+								</div>
+									
+								<div class="row uniform">
+									<div class="12u$">
+										<ul class="actions">
+											<li><button class="special" id="compute">Compute</button></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</div>
+								</div>
+								
+								<hr/>
+									
+								<div id="actors"></div>
+								<script id="template" type="x-tmpl-mustache">
+							      {{#actors}}
+							        <div class="actor">
+							          <span>{{who}}</span>
+							          <span>{{type}}</span>
+							          <span>{{amount}}</span>
+							        </div>
+							      {{/actors}}
+							    </script>
+							    
+							</div>
+						</center>
 						
 					</section>
 
